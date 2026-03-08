@@ -238,10 +238,41 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    // Optimize renderer settings to prevent context loss
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Cap pixel ratio to prevent memory issues
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, []);
+
+    // Configure renderer for better performance
+    gl.powerPreference = "high-performance";
+    gl.antialias = false; // Disable antialias to improve performance
+    gl.precision = "mediump"; // Use medium precision
+    gl.sortObjects = false; // Disable automatic sorting
+    gl.scissorTest = true; // Enable scissor test for clipping
+
+    // Handle WebGL context loss and restoration
+    const handleContextLoss = () => {
+      console.warn("WebGL context lost, attempting recovery...");
+    };
+
+    const handleContextRestored = () => {
+      console.log("WebGL context restored");
+    };
+
+    gl.domElement.addEventListener("webglcontextlost", handleContextLoss);
+    gl.domElement.addEventListener(
+      "webglcontextrestored",
+      handleContextRestored,
+    );
+
+    return () => {
+      gl.domElement.removeEventListener("webglcontextlost", handleContextLoss);
+      gl.domElement.removeEventListener(
+        "webglcontextrestored",
+        handleContextRestored,
+      );
+    };
+  }, [gl, size]);
 
   return null;
 }
@@ -250,8 +281,20 @@ export function World(props: WorldProps) {
   const { globeConfig } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
+
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <Canvas
+      scene={scene}
+      camera={new PerspectiveCamera(50, aspect, 180, 1800)}
+      onCreated={(state) => {
+        // Optimize renderer on creation
+        state.gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+        state.gl.antialias = false;
+        state.gl.precision = "mediump";
+      }}
+      frameloop="demand" // Only render when needed
+      dpr={[1, 1.5]} // Cap DPR to prevent memory issues
+    >
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight

@@ -36,13 +36,11 @@ export const InfiniteMovingCards = ({
         if (scrollerRef.current) {
           scrollerRef.current.appendChild(duplicatedItem);
         }
-        
       });
 
       getDirection();
       getSpeed();
       setStart(true);
-      
     }
   }
   const getDirection = () => {
@@ -50,12 +48,12 @@ export const InfiniteMovingCards = ({
       if (direction === "left") {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "forwards"
+          "forwards",
         );
       } else {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "reverse"
+          "reverse",
         );
       }
     }
@@ -76,7 +74,7 @@ export const InfiniteMovingCards = ({
       ref={containerRef}
       className={cn(
         "scroller relative z-20 w-screen overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
+        className,
       )}
     >
       <ul
@@ -84,12 +82,12 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-16 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[90vw] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-800 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 md:w-[60vw] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)] "
+            className="relative w-[90vw] max-w-full shrink-0 rounded-2xl border border-b-0 border-slate-800 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 md:w-[60vw] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)] min-h-[280px] md:min-h-[300px]"
             style={{
               //   add these two
               //   you can generate the color from here https://cssgradient.io/
@@ -98,7 +96,6 @@ export const InfiniteMovingCards = ({
                 "linear-gradient(90deg, rgba(4,7,29,1) 26%, rgba(12,14,35,1) ,100%)",
             }}
             key={idx}
-            
           >
             <blockquote>
               <div

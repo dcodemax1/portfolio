@@ -170,7 +170,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
       fragColor.rgb *= fragColor.a;
         }`}
       uniforms={uniforms}
-      maxFps={60}
+      maxFps={30}
     />
   );
 };
@@ -184,7 +184,7 @@ type Uniforms = {
 const ShaderMaterial = ({
   source,
   uniforms,
-  maxFps = 60,
+  maxFps = 30,
 }: {
   source: string;
   hovered?: boolean;
@@ -193,15 +193,17 @@ const ShaderMaterial = ({
 }) => {
   const { size } = useThree();
   const ref = useRef<THREE.Mesh | null>(null);
-  let lastFrameTime = 0;
+  const lastFrameTimeRef = useRef(0);
 
   useFrame(({ clock }) => {
     if (!ref.current) return;
     const timestamp = clock.getElapsedTime();
-    if (timestamp - lastFrameTime < 1 / maxFps) {
+    const frameDelta = 1 / maxFps;
+
+    if (timestamp - lastFrameTimeRef.current < frameDelta) {
       return;
     }
-    lastFrameTime = timestamp;
+    lastFrameTimeRef.current = timestamp;
 
     const material: any = ref.current.material;
     const timeLocation = material.uniforms.u_time;
@@ -230,7 +232,7 @@ const ShaderMaterial = ({
         case "uniform3fv":
           preparedUniforms[uniformName] = {
             value: uniform.value.map((v: number[]) =>
-              new THREE.Vector3().fromArray(v)
+              new THREE.Vector3().fromArray(v),
             ),
             type: "3fv",
           };
@@ -289,9 +291,19 @@ const ShaderMaterial = ({
   );
 };
 
-const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
+const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 30 }) => {
   return (
-    <Canvas className="absolute inset-0  h-full w-full">
+    <Canvas
+      className="absolute inset-0 h-full w-full"
+      onCreated={(state) => {
+        // Optimize renderer settings
+        state.gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.2));
+        state.gl.antialias = false;
+        state.gl.precision = "mediump";
+      }}
+      frameloop="demand" // Only render when needed
+      dpr={[1, 1.2]} // Cap DPR
+    >
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
     </Canvas>
   );

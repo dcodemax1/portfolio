@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { useState } from "react";
-import animationData from '@/data/confetti.json';
+import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -19,7 +19,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
-        className
+        className,
       )}
     >
       {children}
@@ -50,19 +50,18 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const [copied, setCopied] = useState(false);
 
-  const [copied, setCopied]= useState(false);
-
-   const handleCopy = () => {
+  const handleCopy = () => {
     const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText('onlydeepikakumari@gmail.com');
+    navigator.clipboard.writeText("onlydeepikakumari@gmail.com");
     setCopied(true);
   };
   return (
     <div
       className={cn(
         "group/bento relative overflow-hidden shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border border-neutral-200 bg-white  transition duration-200 hover:shadow-xl  dark:shadow-none dark:bg=black  border-white/[0.1]",
-        className
+        className,
       )}
       style={{
         //   add these two
@@ -108,7 +107,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
           )}
         >
           <div className="font-sans text-[#c1c2d3] font-extralight text-sm md:text-xs lg:text-base z-10">
@@ -118,15 +117,14 @@ export const BentoGridItem = ({
           <div className=" font-sans font-bold text-lg lg:text-3xl max-w-96 z-10  ">
             {title}
           </div>
-        
-         
-         {id===2 && <GridGlobe/>}
+
+          {id === 2 && <GridGlobe />}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {['TypeScript', 'React.js','Next.js'].map((item) => (
+                {["Tailwind CSS", "React.js", "Node.js"].map((item) => (
                   <span
                     key={item}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
@@ -136,14 +134,12 @@ export const BentoGridItem = ({
                   </span>
                 ))}
 
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]"/>
-                
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
 
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"/>
-
-                {['MongoDB', 'Express.js','Tailwind css'].map((item) => (
+                {["MongoDB", "Express.js", "SQL"].map((item) => (
                   <span
                     key={item}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
@@ -153,36 +149,31 @@ export const BentoGridItem = ({
                   </span>
                 ))}
               </div>
+            </div>
+          )}
+
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div className={`absolute -bottom-5 right-0`}>
+                <Lottie
+                  animationData={animationData}
+                  loop={copied}
+                  autoplay={copied}
+                  style={{ width: "200px", height: "200px" }}
+                />
               </div>
 
-              )}
-
-              {id===6 && (
-                   <div className="mt-5 relative">
-                    <div className={`absolute -bottom-5 right-0`}>
-                    <Lottie options={{
-                         loop: copied,
-                         autoplay: copied,
-                         animationData,
-                         rendererSettings:{
-                          preserveAspectRatio:'xMidYMid slice',
-                         }
-                    }}/>
-
-                    </div>
-
-                    <MagicButton
+              <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
                 otherClasses="!bg-[#161A31]"
               />
-                   </div>
-              )}
-
+            </div>
+          )}
+        </div>
       </div>
     </div>
-    </div>
-  );}
-
+  );
+};

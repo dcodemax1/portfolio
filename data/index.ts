@@ -88,15 +88,15 @@ export const projects = [
     title: "My Portfolio Website ",
     des: "Interactive Portfolio with TypeScript, Tailwind CSS, and 3D animations for a unique, modern UI experience.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376193/Screenshot_2025-08-22_224659_rmxev3.png",
-    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756378648/nextjs-icon_jpjccj.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377922/Tailwind_br96u2.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377976/typescript_r6fvta.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377557/acenternity_logo_j1ppmd.png"],
-    link: "",
+    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877636/nextjs-1_uqkyeb.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377922/Tailwind_br96u2.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377976/typescript_r6fvta.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377557/acenternity_logo_j1ppmd.png"],
+    link: "https://portfolio-alpha-seven-31.vercel.app/",
   },
   {
     id: 3,
     title: "Sorting Visualizer - DSA Project",
     des: "Interactive Sorting Visualizer showcasing Bubble, Selection, Insertion, Merge, and Quick Sort algorithms for learning DSA.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376170/Screenshot_2025-08-22_230251_em1rbx.png",
-    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756378845/Unofficial_JavaScript_logo_2.svg_lxsank.png"],
+    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg"],
     link: "https://algo-sort-omega.vercel.app/",
   },
   {
@@ -104,7 +104,7 @@ export const projects = [
     title: "Amazon Clone Frontend",
     des: "Amazon Clone frontend built using HTML and CSS, featuring product browsing and a responsive UI.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756286653/Screenshot_2025-08-22_231220_lojn6t.png",
-    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756378845/Unofficial_JavaScript_logo_2.svg_lxsank.png"],
+    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg"],
     link: "",
   },
 ];
@@ -148,32 +148,58 @@ title: "Senior, Shoolini University"
 export const skills = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
+    name: "HTML",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772883010/html5_18891_awhgyw.webp",
     nameImg: "/cloudName.svg",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377724/app_fln2hx.png",
+    name: "CSS",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772883232/free-css-k5_csjgki.webp",
     nameImg: "/appName.svg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
+    name: "JavaScript",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg",
     nameImg: "/hostName.svg",
   },
   {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
+    name: "React",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772883347/React-icon.svg_2_t3r4ee.png",
     nameImg: "/streamName.svg",
   },
   {
     id: 5,
-    name: "docker.",
-    img: "/dock.svg",
+    name: "Node.js",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377812/nodejs-icon-logo_srrvio.svg",
+    nameImg: "/dockerName.svg",
+  },
+    {
+    id: 6,
+    name: "Express.js",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377771/express-js_fvzei7.png",
+    nameImg: "/dockerName.svg",
+  },
+    {
+    id: 7,
+    name: "MongoDB",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377786/mongodb_npju0k.svg",
+    nameImg: "/dockerName.svg",
+  },
+
+    {
+    id: 8,
+    name: "MySQL",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772883449/mysql_zuohgt.svg",
+    nameImg: "/dockerName.svg",
+  },
+
+      {
+    id: 9,
+    name: "Github",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772884659/githubbb-removebg-preview-Photoroom_lguiet.png",
     nameImg: "/dockerName.svg",
   },
 ];
@@ -181,28 +207,28 @@ export const skills = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Full Stack Developer Intern",
+    desc: "Developed a full-stack application using MERN stack and SQL, JWT and OTP authentication, RESTful APIs, PDF generation, Cloudinary storage, email notifications.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Full Stack Website",
+    desc: "Implemented features such as exploring movies, choosing shows by date and time, reserving seats, making secure transactions, and receiving email confirmations,  payment gateway, and admin dashboard for managing movies, shows, and reservations.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "DSA based Project",
+    desc: "Created an interactive platform to demonstrate sorting techniques such as Bubble, Selection, Insertion, Merge, and Quick Sort.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
+    title: "Using HTML CSS, JavaScript Amazon Clone Frontend",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
@@ -212,7 +238,7 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756378416/icons8-github_x9fszu.svg",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772884659/githubbb-removebg-preview-Photoroom_lguiet.png",
     link: "https://github.com/dcodemax1",
   },
   {

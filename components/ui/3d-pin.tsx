@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-
 export const PinContainer = ({
   children,
   title,
@@ -18,7 +17,7 @@ export const PinContainer = ({
   containerClassName?: string;
 }) => {
   const [transform, setTransform] = useState(
-    "translate(-50%,-50%) rotateX(0deg)"
+    "translate(-50%,-50%) rotateX(0deg)",
   );
 
   const onMouseEnter = () => {
@@ -29,14 +28,15 @@ export const PinContainer = ({
   };
 
   return (
-    <a
+    <div
       className={cn(
         "relative group/pin z-50  cursor-pointer",
-        containerClassName
+        containerClassName,
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
+      role="link"
+      onClick={() => href && window.open(href, "_blank", "noopener,noreferrer")}
     >
       <div
         style={{
@@ -55,7 +55,7 @@ export const PinContainer = ({
         </div>
       </div>
       <PinPerspective title={title} href={href} />
-    </a>
+    </div>
   );
 };
 
