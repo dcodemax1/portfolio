@@ -81,7 +81,7 @@ export const projects = [
     des: "A MERN stack web app where users can browse movies, select showtimes, reserve seats, and pay online securely.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376224/Screenshot_2025-08-22_224007_qksnoo.png",
     iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377880/react_wx73if.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377812/nodejs-icon-logo_srrvio.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377771/express-js_fvzei7.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377786/mongodb_npju0k.svg"],
-    link: "https://quickshow-client-fawn-two.vercel.app/",
+    link: "https://cinehub-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
     id: 2,
@@ -89,7 +89,7 @@ export const projects = [
     des: "Interactive Portfolio with TypeScript, Tailwind CSS, and 3D animations for a unique, modern UI experience.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376193/Screenshot_2025-08-22_224659_rmxev3.png",
     iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877636/nextjs-1_uqkyeb.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377922/Tailwind_br96u2.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377976/typescript_r6fvta.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377557/acenternity_logo_j1ppmd.png"],
-    link: "https://portfolio-alpha-seven-31.vercel.app/",
+    link: "https://portfolio-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
     id: 3,
@@ -97,7 +97,7 @@ export const projects = [
     des: "Interactive Sorting Visualizer showcasing Bubble, Selection, Insertion, Merge, and Quick Sort algorithms for learning DSA.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376170/Screenshot_2025-08-22_230251_em1rbx.png",
     iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg"],
-    link: "https://algo-sort-omega.vercel.app/",
+    link: "https://algo-sort-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
     id: 4,
