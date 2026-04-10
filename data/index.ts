@@ -77,6 +77,14 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: " Live - SBIA Member & Loan Processing System.",
+    des: "MERN stack, KYC-based member onboarding and loan requests,Features admin dashboard, referral tracking, and cloud-based document storage.",
+    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/q_auto/f_auto/v1775821244/Screenshot_2026-04-10_170438_hwoy3h.png",
+    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377880/react_wx73if.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377812/nodejs-icon-logo_srrvio.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377771/express-js_fvzei7.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/q_auto/f_auto/v1772883449/mysql_zuohgt.svg"],
+    link: "https://finance.shreejan.co.in/",
+  },
+   {
+    id: 2,
     title: "Online Movie Ticket Booking System - MERN Stack",
     des: "A MERN stack web app where users can browse movies, select showtimes, reserve seats, and pay online securely.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376224/Screenshot_2025-08-22_224007_qksnoo.png",
@@ -84,7 +92,7 @@ export const projects = [
     link: "https://cinehub-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "My Portfolio Website ",
     des: "Interactive Portfolio with TypeScript, Tailwind CSS, and 3D animations for a unique, modern UI experience.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376193/Screenshot_2025-08-22_224659_rmxev3.png",
@@ -92,7 +100,7 @@ export const projects = [
     link: "https://portfolio-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Sorting Visualizer - DSA Project",
     des: "Interactive Sorting Visualizer showcasing Bubble, Selection, Insertion, Merge, and Quick Sort algorithms for learning DSA.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376170/Screenshot_2025-08-22_230251_em1rbx.png",
@@ -100,7 +108,7 @@ export const projects = [
     link: "https://algo-sort-git-main-deepika-kumari-s-projects.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Amazon Clone Frontend",
     des: "Amazon Clone frontend built using HTML and CSS, featuring product browsing and a responsive UI.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756286653/Screenshot_2025-08-22_231220_lojn6t.png",
