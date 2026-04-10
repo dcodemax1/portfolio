@@ -107,14 +107,7 @@ export const projects = [
     iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg"],
     link: "https://algo-sort-git-main-deepika-kumari-s-projects.vercel.app/",
   },
-  {
-    id: 5,
-    title: "Amazon Clone Frontend",
-    des: "Amazon Clone frontend built using HTML and CSS, featuring product browsing and a responsive UI.",
-    img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756286653/Screenshot_2025-08-22_231220_lojn6t.png",
-    iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377753/html_pktrpm.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377741/css_xag0to.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1772877211/javascript-logo_oqvjmk.svg"],
-    link: "",
-  },
+ 
 ];
 
 export const feedback = [
