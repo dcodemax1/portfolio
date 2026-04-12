@@ -89,7 +89,7 @@ export const projects = [
     des: "A MERN stack web app where users can browse movies, select showtimes, reserve seats, and pay online securely.",
     img: "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756376224/Screenshot_2025-08-22_224007_qksnoo.png",
     iconLists: ["https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377880/react_wx73if.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377812/nodejs-icon-logo_srrvio.svg", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377771/express-js_fvzei7.png", "https://res.cloudinary.com/dgo4l8irj/image/upload/v1756377786/mongodb_npju0k.svg"],
-    link: "https://cinehub-git-main-deepika-kumari-s-projects.vercel.app/",
+    link: "https://cine-hub-deploy.vercel.app/",
   },
   {
     id: 3,
